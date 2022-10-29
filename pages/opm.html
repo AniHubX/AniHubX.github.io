@@ -61,7 +61,156 @@
 
    <!--download-->
    <div class="download">
-   <div class="menu" id="menu-drop">
+      <header>
+         <div class="drop-btn">
+             Download <span class="fas fa-caret-down"></span>
+          </div>
+          <div class="tooltip"></div>
+          <div class="wrapper">
+             <ul class="menu-bar">
+                <li class="Season1">
+                   <a href="#">
+                     Season 1
+                   </a>
+                </li>
+                <li class="Season2">
+                   <a href="#">
+                      Season 2 
+                   </a>
+                </li>
+             </ul>
+ 
+             <!--Season1-->
+             <ul class="Season1-drop">
+                 <li class="arrow back-Season1"><i class="fas fa-angle-left" style="padding-right: 1rem;"></i>Season 1</li>
+                 <li>
+                    <a href="#">
+                       episode 1
+                    </a>
+                 </li>
+                 <li>
+                  <a href="#">
+                     episode 2
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     episode 3
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     episode 4
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     episode 5
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     episode 6
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     episode 7
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     episode 8
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     episode 9
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     episode 10
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     episode 11
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     episode 12
+                  </a>
+               </li>
+              </ul>
+             <!-- Season2-->
+             <ul class="Season2-drop">
+                <li class="arrow back-Season2"><i class="fas fa-angle-left" style="padding-right: 1rem;"></i>Season 2</li>
+                <li>
+                   <a href="#">
+                      episode 1
+                   </a>
+                </li>
+                <li>
+                 <a href="#">
+                    episode 2
+                 </a>
+              </li>
+              <li>
+                 <a href="#">
+                    episode 3
+                 </a>
+              </li>
+              <li>
+                 <a href="#">
+                    episode 4
+                 </a>
+              </li>
+              <li>
+                 <a href="#">
+                    episode 5
+                 </a>
+              </li>
+              <li>
+                 <a href="#">
+                    episode 6
+                 </a>
+              </li>
+              <li>
+                 <a href="#">
+                    episode 7
+                 </a>
+              </li>
+              <li>
+                 <a href="#">
+                    episode 8
+                 </a>
+              </li>
+              <li>
+                 <a href="#">
+                    episode 9
+                 </a>
+              </li>
+              <li>
+                 <a href="#">
+                    episode 10
+                 </a>
+              </li>
+              <li>
+                 <a href="#">
+                    episode 11
+                 </a>
+              </li>
+              <li>
+                 <a href="#">
+                    episode 12
+                 </a>
+              </li>
+             </ul>
+          </div>
+       </header>
+   <!-- <div class="menu" id="menu-drop">
       <span class="select">Season 1</span>
       <div class="menu__icon-box">
           <div class="menu__icon"></div>
@@ -117,23 +266,62 @@
 
       
         
-      </div>
+      </div> -->
     </div>
 </div>
 <script>
-   const menu = document.querySelector('.menu');
-const option = document.querySelector('.menu span')
 
-menu.addEventListener('click', e => {
-  if (e.target.classList.contains('menu') || e.target.classList.contains('select') || e.target.classList.contains('menu__icon')) {
-      menu.classList.toggle('menu__active');
-  }
+const drop_btn = document.querySelector(".drop-btn");
+         const tooltip = document.querySelector(".tooltip");
+         const menu_wrapper = document.querySelector(".wrapper");
+         const menu_bar = document.querySelector(".menu-bar");
+         const Season1_drop = document.querySelector(".Season1-drop");
+         const Season1 = document.querySelector(".Season1");
+         const Season2_drop = document.querySelector(".Season2-drop");
+         const Season2 = document.querySelector(".Season2");
+      
+         const Season1_btn= document.querySelector(".back-Season1");
+         const Season2_btn = document.querySelector(".back-Season2");
+        
+           drop_btn.onclick = (()=>{
+             menu_wrapper.classList.toggle("show");
+             tooltip.classList.toggle("show");
+           });
+           Season1.onclick = (()=>{
+             menu_bar.style.marginLeft = "-400px";
+             setTimeout(()=>{
+               Season1_drop.style.display = "block";
+             }, 100);
+           });
+           Season2.onclick = (()=>{
+             menu_bar.style.marginLeft = "-400px";
+             setTimeout(()=>{
+               Season2_drop.style.display = "block";
+             }, 100);
+           });
+//          backbutton
+           Season1_btn.onclick = (()=>{
+             menu_bar.style.marginLeft = "0px";
+             Season1_drop.style.display = "none";
+           });
+           Season2_btn.onclick = (()=>{
+             Season2_drop.style.display = "none";
+             menu_bar.style.marginLeft = "0px";
+           });
+         
+//    const menu = document.querySelector('.menu');
+// const option = document.querySelector('.menu span')
 
-  if (e.target.classList.contains('menu__dropdown-option')) {
-      option.innerHTML = e.target.textContent;
-      menu.classList.remove('menu__active');
-  }
-})
+// menu.addEventListener('click', e => {
+//   if (e.target.classList.contains('menu') || e.target.classList.contains('select') || e.target.classList.contains('menu__icon')) {
+//       menu.classList.toggle('menu__active');
+//   }
+
+//   if (e.target.classList.contains('menu__dropdown-option')) {
+//       option.innerHTML = e.target.textContent;
+//       menu.classList.remove('menu__active');
+//   }
+// })
 </script>
 </body>
 </html>
