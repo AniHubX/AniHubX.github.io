@@ -293,7 +293,6 @@ nav {
   }
   
   
-  
   .rating{
     font-size: 1.8rem;
     position: absolute;
@@ -466,6 +465,10 @@ nav {
   .menu__dropdown-option {
     padding: 0.8rem 1.6rem;
     border-radius: 0.4rem;
+  }
+  .menu__dropdown-option a{
+    text-decoration: none;
+    color: rgb(197, 188, 188);
   }
   
   .menu__active {
