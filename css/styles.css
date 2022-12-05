@@ -522,7 +522,6 @@ nav {
     transition: transform 0.4s cubic-bezier(0.28, 0.25, 0.36, 1.28);
     padding: 1.8rem 2.4rem;
     cursor: pointer;
-    box-shadow: 0rem 0rem 3rem #000000;
     z-index: 2;
   }
   .menu__icon-box {
@@ -610,3 +609,8 @@ nav {
   padding-right: 1rem;
 }
 
+
+.download .menu .menu__dropdown .menu__dropdown-option a{
+  text-decoration: none;
+  color: rgb(197, 188, 188);
+}
